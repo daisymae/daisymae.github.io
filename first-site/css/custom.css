@@ -1,0 +1,176 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+/* HTML elements */
+body {
+  padding-top: 50px;
+  /* remove this line so there's no white space after the footer ... would it work the same to not have padding on the footer?
+  Why is there a padding-bottom on the footer?  THe padding is on the footer so there's some area below the image
+  padding-bottom: 20px; */
+}
+
+/* this specifies unordered list with a class of nav: */
+ul.nav, .jumbotron h1  {
+	font-family: 'Arvo', courier, serif;
+}
+
+ul.nav {
+	font-size: 13px;
+}
+
+footer {
+	background-color: #f74c3c;
+	padding-top: 150px;
+	padding-bottom: 30px;
+}
+
+/* IDs */
+#get-involved {
+	background-color: #f5f5f5;
+}
+
+/* this was used temporarily to show how IDs take precedence even when an element is in a div defined by a class */
+#educator {
+	font-size: 30px;
+	color: black;
+	text-transform: lowercase;
+}
+
+/* Classes */
+/* Using the developer tools in the browser to play around first, we know we want to center the entire jumbotron area */
+/* the leading '.' makes this a class */
+.jumbotron {
+	text-align: center;
+	/* example: color: red; */
+	background-image: url('../images/hero_image.jpg');
+	color: white;
+}
+
+/* font family for the h1 tag */
+/* can combine css; since the ul.nav and jumbtron h1 are just for the font-family, can specify them together:
+ul.nav, .jumbotron h1 { ... } so no longer need this one separate:
+.jumbotron h1 {
+	font-family: 'Arvo', courier, serif;
+}
+*/
+
+/* but have other h1 settings: padding */
+.jumbotron h1 {
+	margin-top: 0px;
+	margin-bottom: 50px;
+}
+
+.jumbotron p {
+	margin-bottom: 30px;
+	font-weight: 100; 
+	padding: 0 50px; /* could have used margin too */
+}
+/* look at the button in the browser developer tools.  See that it comes from bootstrap.min.css and has btn-lg class and a font size of 18px */
+/* doing this causes the 36px size to override the value coming from bootstrap.min.css.
+   Does load order matter?  Yes it does 
+   Additionally, adding the style INTERNALLY in the HTML will override the CSS IF it follows the CSS in load order.
+*/
+.btn-lg {
+	font-size: 36px;
+}
+
+/* shows specificity; the 'p' makes this specific to paragraphs within the jumbotron class; and the setting will override the previous settings */
+/* inline styling in the HTML is the most specific can get */
+/* Example:http://courses.makerbased.com/courses/html-and-css/lectures/57575
+.jumbotron p {
+	color: blue;
+}
+*/
+/* class used with the span tag to show how to use it to style */
+/*.emphasis {
+	color: red;
+	font-size: 26px;
+}*/
+
+.homepage {
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.homepage h2,
+.homepage h3 {
+	color: #e74c3c;
+	font-family: 'Arvo', courier, serif;
+	text-transform: uppercase;
+}
+
+.homepage h2 {
+	font-size: 30px;
+}
+
+.homepage h3 {
+	font-size: 26px;
+}
+
+.homepage p{
+	font-weight: 300;
+	font-size: 21px;
+}
+
+.homepage a {
+	color: #e74c3c;
+}
+
+.homepage a:hover {
+	color: #e74c3c;
+	text-decoration: none; /* other option from bootstrap is underline */
+	opacity: .8; /* scale of 0-1; 1 is not transparent, 0 is completely transparent; short-cut to make a lighter version of the color specified */
+}
+
+.homepage hr {
+	border-top: 1px solid #e74c3c;
+	/* if width is done as a percent, it will resize as it is the percentage of the container it is in */
+	width: 160px; /* this could also be done as % */
+	margin-top: 15px;
+}
+
+/* Responsive Styling */
+/* This @media information comes from the Bootstrap site information.  The settings are what we are changing for when the screen gets smaller */
+@media (max-width: 1199px) {
+	.jumbotron h1 {
+		font-size: 56px;
+		margin-bottom: 30px;
+	}
+}
+
+@media (max-width: 991px) {
+	.jumbotron h1 {
+		font-size: 44px;
+	}
+
+	.jumbotron p {
+		padding: 0 10px;
+	}
+
+	#get-involved .col-md-4 {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+}
+
+@media (max-width: 767px) {
+	.jumbotron h1 {
+		font-size: 24px;
+	}
+
+	.jumbotron p {
+		font-size: 15px;
+		padding: 0;
+	}
+
+  .btn-lg {
+  	font-size: 18px;
+  }
+
+  .homepage p {
+  	font-size: 18px;
+  }
+  
+	footer img {
+		width: 80%;
+	}
+}

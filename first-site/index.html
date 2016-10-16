@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Jumbotron Template for Bootstrap</title>
+
+    <!-- This is our Google Arvo font [NOTE: in this copy, there is a type='text/css' at the end, if this doesn't work] -->
+    <!-- and Font-Awesome -->
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- it is obviously better to use a separate stylesheet file, BUT, styles can be done internally as well, like this:
+    <style>
+      .jumbotron {
+          text-align: center;
+       }
+    </style>
+    -->
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <!--This part helps the navbar become a hamburger menu if the screen is smaller -->
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- inline elements, like button and anchor tags, go on the same line.  block elements, like div and paragraph go on a new line -->
+          <a class="navbar-brand" href="#"><img src="images/top_logo.png" alt="One Million Lines"/> <!-- changed this to an image instead of this text: One Million Lines--></a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <!-- find navbar-right in the components area of Bootstrap -->
+          <ul class="nav navbar-nav navbar-right">
+            <!-- class="active" was removed from the item below - it caused it to be highlighted when the page loaded -->
+            <li><a href="#who">WHO WE ARE</a></li>
+            <li><a href="#get-involved">GET INVOLVED</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <!-- additionally styles can be done inline:
+       <div class="jumbotron" style="text-align: center;">
+    -->
+    <div class="jumbotron">
+      <!--<p>This is outside the container.  And if I go really, really long, it will look especially ugly because the container is defining the area that the text is in.  It is basically setting borders.  We haven't looked at the container class in the CSS yet, but by inspecting elements in the browser, we can see that the container (used to have a width of 1170 px) now has a padding-right, padding-left of 15px each and margin-right and margin-left of auto.  This text outside the container has no margin.</p> -->
+      <div class="container">
+        <h1>Our goal is to inspire <br>
+Tallahassee to write 1,000,000<br>lines of code_</h1>
+        <!-- adding style="color:green;" to the <p> take is the most specific styling -->
+        <p>All over the country people are taking the 
+  <strong>HOUR OF CODE</strong> challenge issued by <strong>CODE.org</strong>. Millions of lines of code are being written. In the capital of Florida, Tallahassee, the community is taking the challenge and our goal is to write 1,000,000 lines of code_.</p>
+  <!-- use getbootstrap.com/css to find button class styles  -->
+  <!-- this caused a double right arrow to appear &raquo; -->
+        <p><a class="btn btn-danger btn-lg" href="#" role="button">Learn More &raquo;</a></p>
+        <!-- NOTE: Title tag is no longer a supported attribute of img.  What it did before was display this text if you hovered over the image.  -->
+        <img src="images/code.png" title="Code.org logo" alt="Code.org" />
+      </div>
+    </div>
+
+
+    <div id="who">
+      <div class="container homepage">
+        <img src="images/academy_brand_med.png" alt="MASSIVE Academy"/>
+        <h2>Who We Are</h2>
+        <hr>
+        <p>We are <a href="http://www.massiveacademy.us" target="_blank">MASSIVE Academy</a>.  We aim to improve education through both method - effective project-based learning - and material - by teaching skills that are applicable to improving your life today.</p>
+      </div>
+    </div>
+   
+   <div id="get-involved">
+    <!-- give the div 2 class styles; container is from Bootstrap, we'll define homepage -->
+      <div class="container homepage">
+        <h2>Get Involved</h2>
+        <!-- horizontal rule -->
+        <hr>
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-md-4">
+            <!-- span is like a div, but inline -->
+            <span class="fa-stack fa-4x">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+            </span>
+            <h3>Students</h3>
+            <!-- example of a span for styling around 1,000,000 lines -->
+            <p>Want to learn how to code?  Want to help us get to <span class="emphasis">1,000,000 lines</span>?  Click the button below and we'll let you know how to get involved. </p>
+            <p><a class="btn btn-default" href="grid.html" role="button">Start Learning &raquo;</a></p> <!--the &raquo gives a >> on the button -->
+          </div>
+          <div class="col-md-4">
+            <span class="fa-stack fa-4x">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+            </span>
+            <h3 >Educators</h3>
+            <!-- example of span class around Awesome -->
+            <p>Want to bring this initiative to your school or institution?  <span class="emphasis">Awesome!</span>  Click the button below and we'll make it happen. </p>
+            <!-- the target attribute below has the link open up in a new page (or tab) -->
+            <p><a class="btn btn-default" href="http://www.google.com" target="_blank" role="button">Join The Initiative &raquo;</a></p>
+         </div>
+          <div class="col-md-4">
+            <span class="fa-stack fa-4x">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-money fa-stack-1x fa-inverse"></i>
+            </span>
+            <h3>Sponsors</h3>
+            <p>We love all the support we get to help host more events, and empower more lives with the knowledge of coding.  Click to get involved.</p>
+            <p><a class="btn btn-default" href="https://goo.gl/forms/nAupHRgn1YFi6C6W2" target="_blank" role="button">Give Support &raquo;</a></p>
+          </div>
+        </div>
+      </div> <!-- /container -->
+    </div> <!-- get-involved -->
+
+    <footer>
+    <!-- this shows a copyright symbol 
+      <p>&copy; 2016 Company, Inc.</p> -->
+      <div class="container">
+        <p><img src="images/one_million_bottom_brand.png"/></p>
+      </div>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
