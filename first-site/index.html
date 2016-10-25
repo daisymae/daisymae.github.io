@@ -57,7 +57,8 @@
             <span class="icon-bar"></span>
           </button>
           <!-- inline elements, like button and anchor tags, go on the same line.  block elements, like div and paragraph go on a new line -->
-          <a class="navbar-brand" href="#"><img src="images/top_logo.png" alt="One Million Lines"/> <!-- changed this to an image instead of this text: One Million Lines--></a>
+          <!-- to get smooth scrolling to work, need to change this href from '#' to an id and give an id to the jumbotron div -->
+          <a class="navbar-brand" href="#jumbotron"><img src="images/top_logo.png" alt="One Million Lines"/> <!-- changed this to an image instead of this text: One Million Lines--></a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <!-- find navbar-right in the components area of Bootstrap -->
@@ -75,7 +76,7 @@
     <!-- additionally styles can be done inline:
        <div class="jumbotron" style="text-align: center;">
     -->
-    <div class="jumbotron">
+    <div id="jumbotron" class="jumbotron">
       <!--<p>This is outside the container.  And if I go really, really long, it will look especially ugly because the container is defining the area that the text is in.  It is basically setting borders.  We haven't looked at the container class in the CSS yet, but by inspecting elements in the browser, we can see that the container (used to have a width of 1170 px) now has a padding-right, padding-left of 15px each and margin-right and margin-left of auto.  This text outside the container has no margin.</p> -->
       <div class="container">
         <h1>Our goal is to inspire <br>
@@ -161,5 +162,6 @@ Tallahassee to write 1,000,000<br>lines of code_</h1>
     <script src="js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/smoothscroll.js"></script>
   </body>
 </html>
