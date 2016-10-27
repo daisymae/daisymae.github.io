@@ -56,6 +56,23 @@ footer {
 	color: white;
 }
 
+.modal-content iframe {
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+
+.modal-content button.close {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	background-color: white;
+	font-size: 28px;
+	width: 30px;
+	opacity: 1;
+	border-radius: 24px; /* this makes it round */
+	-webkit-border-radius: 24px;
+	-moz-border-radius: 24px;
+}
 /* font family for the h1 tag */
 /* can combine css; since the ul.nav and jumbtron h1 are just for the font-family, can specify them together:
 ul.nav, .jumbotron h1 { ... } so no longer need this one separate:
