@@ -15,7 +15,9 @@
     <!-- This is our Google Arvo font [NOTE: in this copy, there is a type='text/css' at the end, if this doesn't work] -->
     <!-- and Font-Awesome -->
     <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
-    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+    <!-- isn't working for some reason, try CDN 
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -86,7 +88,26 @@ Tallahassee to write 1,000,000<br>lines of code_</h1>
   <strong>HOUR OF CODE</strong> challenge issued by <strong>CODE.org</strong>. Millions of lines of code are being written. In the capital of Florida, Tallahassee, the community is taking the challenge and our goal is to write 1,000,000 lines of code_.</p>
   <!-- use getbootstrap.com/css to find button class styles  -->
   <!-- this caused a double right arrow to appear &raquo; -->
-        <p><a class="btn btn-danger btn-lg" href="#" role="button">Learn More &raquo;</a></p>
+        <p><a class="btn btn-danger btn-lg" href="#" role="button" data-toggle="modal" data-target="#myModal">Learn More &raquo;</a></p>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- NOTE: Title tag is no longer a supported attribute of img.  What it did before was display this text if you hovered over the image.  -->
         <img src="images/code.png" title="Code.org logo" alt="Code.org" />
       </div>
@@ -151,9 +172,16 @@ Tallahassee to write 1,000,000<br>lines of code_</h1>
       <div class="container">
         <p><img src="images/one_million_bottom_brand.png"/></p>
       </div>
+      <div id="back-to-top">
+        <a href="#jumbotron"><i class="fa fa-3x fa-chevron-circle-up"></i></a>
+      </div>
+
     </footer>
-
-
+ <!-- move this inside the footer to make it absolute 
+  <div id="back-to-top">
+    <a href="#jumbotron"><i class="fa fa-3x fa-chevron-circle-up"></i></a>
+  </div>
+  -->
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
