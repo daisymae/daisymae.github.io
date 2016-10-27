@@ -15,7 +15,9 @@
     <!-- This is our Google Arvo font [NOTE: in this copy, there is a type='text/css' at the end, if this doesn't work] -->
     <!-- and Font-Awesome -->
     <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
-    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+    <!-- isn't working for some reason, try CDN 
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -153,7 +155,10 @@ Tallahassee to write 1,000,000<br>lines of code_</h1>
       </div>
     </footer>
 
-
+  <div id="back-to-top">
+    <!-- aria-hidden="true" : need this on the tag below? -->
+    <a href="#jumbotron"><i class="fa fa-3x fa-chevron-circle-up"></i></a>
+  </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

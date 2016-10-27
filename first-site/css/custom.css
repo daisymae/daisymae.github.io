@@ -27,6 +27,16 @@ footer {
 	background-color: #f5f5f5;
 }
 
+#back-to-top {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+}
+
+#back-to-top a {
+	color: #333;
+}
+
 /* this was used temporarily to show how IDs take precedence even when an element is in a div defined by a class */
 #educator {
 	font-size: 30px;
